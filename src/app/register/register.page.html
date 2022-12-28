@@ -1,4 +1,4 @@
-<ion-content class="ion-padding">
+<!-- <ion-content class="ion-padding">
   <ion-grid class="ion-align-items-center ion-justify-content-center" style="display: flex; height:100%;">
     <ion-row>
       <ion-col size="12">
@@ -9,7 +9,7 @@
       <ion-col size="12">
         <ion-item lines="none">
           <ion-label position="stacked">First name</ion-label>
-          <ion-input type="text" class="input-secondary-b" required class="ion-border"></ion-input>
+          <ion-input type="text" class="input-secondary-b" required></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="12">
@@ -50,4 +50,60 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+</ion-content> -->
+<ion-content class="register-form ion-padding">
+  <form [formGroup]="registerForm" (ngSubmit)="submitForm()" novalidate>
+    <ion-grid class="ion-align-items-center ion-justify-content-center" style="display: flex; height:100%;">
+      <ion-row>
+        <ion-col size="12">
+          <ion-label>
+            <h1 class="ion-text-center">Register</h1>
+          </ion-label>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item lines="none" class="ion-no-padding --inner-padding-end">
+            <ion-label position="stacked">FirstName</ion-label>
+            <ion-input formControlName="firstName" type="text" class="input-secondary-b"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label position="stacked">LastName</ion-label>
+            <ion-input formControlName="lastName" type="text" class="input-secondary-b"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input formControlName="email" type="email" class="input-secondary-b"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-label position="stacked">Password</ion-label>
+            <ion-input formControlName="password" type="password" class="input-secondary-b"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-button type="submit" color="warning" class="ion-margin-top" expand="block">Submit</ion-button>
+        </ion-col>
+        <ion-col size="12" class="ion-padding">
+          <ion-label>
+            <p class="ion-text-center">or</p>
+          </ion-label>
+        </ion-col>
+        <ion-col size="12" class="ion-no-padding">
+          <ion-button type="submit" color="light" expand="block">
+            <ion-icon slot="start" name="logo-google"></ion-icon>
+            <p>Google</p> 
+          </ion-button>
+        </ion-col>
+        <ion-col size="12" class="ion-padding">
+          <ion-label color="medium">
+            <h3 class="ion-text-center">Not yet a member, <a class="link-yellow" [routerLink]="['/login']">SignIn</a></h3>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
 </ion-content>

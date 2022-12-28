@@ -1,0 +1,15 @@
+.register-form{
+    form{
+        height: 100%;
+        ion-item{
+            --inner-padding-end:0;
+            ion-input{
+                margin-top: 5px;
+                padding-left: 8px !important;
+            }
+        }
+        ion-button{
+            margin-inline: 0;
+        }
+    }
+}
