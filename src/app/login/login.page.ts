@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserServiceService } from '../services/user-service.service';
+import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,8 @@ export class LoginPage implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private userServiceService: UserServiceService
+    private userService: UserService,
+    private router: Router
     ) { 
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required]],
@@ -25,9 +27,14 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    debugger;
     console.log(this.loginForm.value);
-    this.userServiceService.loginUser(this.loginForm.value);
+    this.userService.loginUser(this.loginForm.value).subscribe((res: any) => {
+      let token = res.token;
+      localStorage.setItem('token', token);
+      this.router.navigate(['tabs/tab1']);
+    }, (err) => {
+      debugger;
+    });
   }
 
 }
