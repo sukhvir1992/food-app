@@ -1,0 +1,93 @@
+ion-toolbar{
+    --background: #fff;
+    ion-segment{
+        background: var(--ion-color-warning);
+        width: 100%;
+        border-radius: 0;
+        height: 40px;
+        ion-segment-button {
+            --border-radius: 0;
+        }
+    }
+}
+
+
+.inline-card {
+    min-width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    max-width: 300px;
+
+    .img-card-item {
+        width: 100%;
+        min-width: 250px;
+        .img_box-70{
+            max-width: 70px;
+            height: 70px;
+            overflow: hidden;
+            img {
+                border-radius: 5px;
+            }
+        }
+        .img_box-80{
+            max-width: 80px;
+            height: 80px;
+            overflow: hidden;
+            img {
+                border-radius: 5px;
+            }
+        }
+
+        ion-col {
+            display: flex;
+            white-space: break-spaces;
+
+            div {
+
+                h3,
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+.mb-1{
+    margin-bottom: 3px;
+}
+// overlap title
+.overlap-title {
+    background: var(--ion-color-warning);
+    padding: 5px 5px 2px 3px;
+    border-radius: 3px;  
+    right: -3px;
+    top: -3px;
+    h6{
+        color: #fff;
+    }
+}
+// overlap-hot-deal
+.overlap-hot-deal {
+    background: var(--ion-color-warning);
+    padding: 5px 5px 2px 3px;
+    border-radius: 3px 0px 0px 3px;  
+    right: 0px;
+    top: 20px;
+    h6{
+        color: #fff;
+    }
+}
+// img-box
+.img-box-80{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    img{
+        max-width: unset;
+    }
+}
+
+

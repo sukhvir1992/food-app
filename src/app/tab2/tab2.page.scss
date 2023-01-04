@@ -1,0 +1,15 @@
+.overlap-add-card {
+    background: var(--ion-color-dark-contrast);
+    --padding: 5px 5px 2px 3px;
+    border: 1px solid var(--ion-color-warning);
+    padding: 5px 5px 2px 3px;
+    border-radius: 3px;
+    margin-left: 50%;
+    bottom: -5px;
+    transform: translate(-50%);
+    width: 53px;
+    text-align: center;
+    h6{
+        color: var(--ion-color-warning);
+    }
+}

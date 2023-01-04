@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://api.themoviedb.org/3',
+  baseUrl: 'http://192.168.1.71:8001/',
 };
 
 /*

@@ -1,17 +1,203 @@
-<ion-header [translucent]="true">
+
+<ion-content class="ion-padding">
+  <!-- start tab -->
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-segment color="warning" value="all" mode="ios">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Favorites
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
-</ion-header>
+  <!-- end tab -->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!-- section 1 -->
+  <ion-slides pager="true" [options]="slideOpts"  class="ion-padding-top"> 
+    <ion-slide>
+      <img src="assets/images/slide-1.jpg" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/slide-7.jpg" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/slide-6.jpg" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/slide-8.jpg" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/slide-10.jpg" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/slide-9.jpg" alt="">
+    </ion-slide>
+  </ion-slides>
+<!-- section 1 end -->
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<!-- section 2 -->
+  <div class=" ion-padding-top ">
+    <h4 class="ion-no-margin mb-1">
+      Today's Offer
+    </h4>
+    <div class="i-flex inline-card">
+      <ion-row class="img-card-item ion-align-items-center">
+        <ion-col class="img_box-70 ion-no-padding">
+          <img src="assets/images/product-item-1.jpg" />
+        </ion-col>
+        <ion-col class="ion-text-start ion-align-items-center">
+          <div>
+            <h5 class="ion-no-margin">Monik dhaba</h5>
+            <div class="i-flex ">
+              <ion-icon slot="start" name="time"></ion-icon>
+              <p>17 mins</p>
+            </div>
+            <a href="#" class="link-yellow">50% off upto Rs100</a>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="img-card-item ion-align-items-center">
+        <ion-col class="img_box-70 ion-no-padding">
+          <img src="assets/images/product-item-1.jpg" />
+        </ion-col>
+        <ion-col size="8" class="ion-text-start ion-align-items-center">
+          <div>
+            <h5 class="ion-no-margin">Monik dhaba</h5>
+            <div class="i-flex ">
+              <ion-icon slot="start" name="time"></ion-icon>
+              <p>17 mins</p>
+            </div>
+            <a href="#" class="link-yellow">50% off upto Rs100</a>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+<!-- section 2 end -->
+
+<!-- section 3 -->
+  <div class="ion-padding-top ">
+    <h4 class="ion-no-margin mb-1">
+      Free Delivery's *
+    </h4>
+    <div class="i-flex inline-card ">
+      <ion-row class="img-card-item ion-align-items-center i-border-light ion-margin-end">
+        <ion-col class="img_box-80">
+          <img src="assets/images/product-item-1.jpg" />
+        </ion-col>
+        <ion-col class="ion-text-start ion-align-items-center">
+          <div>
+            <h5 class="ion-no-margin">Monik dhaba</h5>
+            <div class="i-flex ">
+              <ion-icon slot="start" name="star" color="warning"></ion-icon>
+              <p>17 mins</p>
+            </div>
+            <a href="#" class="link-yellow">50% off upto Rs100</a>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="img-card-item ion-align-items-center i-border-light">
+        <ion-col class="img_box-80">
+          <img src="assets/images/product-item-1.jpg" />
+        </ion-col>
+        <ion-col class="ion-text-start ion-align-items-center">
+          <div>
+            <h5 class="ion-no-margin">Monik dhaba</h5>
+            <div class="i-flex ">
+              <ion-icon slot="start" name="star" color="warning"></ion-icon>
+              <p>17 mins</p>
+            </div>
+            <a href="#" class="link-yellow">50% off upto Rs100</a>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+<!-- section 3 end -->
+
+<!-- section 4 -->
+  <div class="ion-padding-top">
+      <h4 class="ion-no-margin">
+        All Offers
+      </h4>
+      <div class="i-flex ion-align-items-center i-border-light ion-margin-bottom ion-padding-10 i-relative">
+        <div class="i-flex ion-align-items-center i-relative ion-margin-end">
+          <div class="img-box-80">
+            <img src="assets/images/images (1).jpeg" />
+          </div>
+          <div class="i-absolute overlap-title">
+            <h6 class="ion-no-margin">10% off</h6>
+          </div>
+        </div>
+
+        <div class="ion-text-start ion-align-items-center">
+          <div>
+            <h5 class="ion-no-margin">Monik dhaba</h5>
+            <div class="i-flex ">
+              <ion-icon slot="start" name="star" color="warning"></ion-icon>
+              <p class="ion-no-margin">17 mins</p>
+            </div>
+            <a href="#" class="link-yellow">50% off upto Rs100</a>
+          </div>
+        </div>
+        <div class="i-absolute overlap-hot-deal">
+          <h6 class="ion-no-margin">10% off</h6>
+        </div>
+      </div>
+
+      <div class="i-flex ion-align-items-center i-border-light ion-margin-bottom ion-padding-10 i-relative">
+        <div class="i-flex ion-align-items-center i-relative ion-margin-end">
+          <div class="img-box-80">
+            <img src="assets/images/images (1).jpeg" />
+          </div>
+          <div class="i-absolute overlap-title">
+            <h6 class="ion-no-margin">10% off</h6>
+          </div>
+        </div>
+
+        <div class="ion-text-start ion-align-items-center">
+          <div>
+            <h5 class="ion-no-margin">Monik dhaba</h5>
+            <div class="i-flex ">
+              <ion-icon slot="start" name="star" color="warning"></ion-icon>
+              <p class="ion-no-margin">17 mins</p>
+            </div>
+            <a href="#" class="link-yellow">50% off upto Rs100</a>
+          </div>
+        </div>
+        <div class="i-absolute overlap-hot-deal">
+          <h6 class="ion-no-margin">10% off</h6>
+        </div>
+      </div>
+
+      <div class="i-flex ion-align-items-center i-border-light ion-padding-10 i-relative">
+        <div class="i-flex ion-align-items-center i-relative ion-margin-end">
+          <div class="img-box-80">
+            <img src="assets/images/images (1).jpeg" />
+          </div>
+          <div class="i-absolute overlap-title">
+            <h6 class="ion-no-margin">10% off</h6>
+          </div>
+        </div>
+
+        <div class="ion-text-start ion-align-items-center">
+          <div>
+            <h5 class="ion-no-margin">Monik dhaba</h5>
+            <div class="i-flex ">
+              <ion-icon slot="start" name="star" color="warning"></ion-icon>
+              <p class="ion-no-margin">17 mins</p>
+            </div>
+            <a href="#" class="link-yellow">50% off upto Rs100</a>
+          </div>
+        </div>
+        <div class="i-absolute overlap-hot-deal">
+          <h6 class="ion-no-margin">10% off</h6>
+        </div>
+      </div>
+  </div>
+<!-- section 4 end -->
+
 </ion-content>

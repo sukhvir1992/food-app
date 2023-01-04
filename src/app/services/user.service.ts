@@ -11,11 +11,11 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   createUser(credentials: { email: string; password: string }): Observable<any> {
-		return this.http.post(`http://192.168.1.69:8001/userservice/api/user/create`, credentials, { headers: this.getHeaders()});
+		return this.http.post(`${environment.baseUrl}userservice/api/user/create`, credentials, { headers: this.getHeaders()});
 	}
 
   loginUser(credentials: { email: string; password: string }): Observable<any> {
-		return this.http.post(`http://192.168.1.69:8001/userservice/api/user/login`, credentials, { headers: this.getHeaders()});
+		return this.http.post(`${environment.baseUrl}userservice/api/user/login`, credentials, { headers: this.getHeaders()});
 	}
 
   getHeaders() {
